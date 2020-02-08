@@ -24,7 +24,7 @@ export const useProductLoader = (filters?: ProductSearchQueryAttributes) => {
             },
             pagination: {
               page: 1,
-              perPage: 100,
+              perPage: 50,
             },
             sort: {
               channel: 'etkp',

@@ -1,0 +1,25 @@
+{
+  "id": 1,
+  "slug": "color",
+  "name": "Suchfarbe",
+  "type": "attributes",
+  "values": [
+    { "name": "blau", "productCount": 67351, "id": 38920 },
+    { "name": "schwarz", "productCount": 66337, "id": 38932 },
+    { "name": "grau", "productCount": 32274, "id": 38925 },
+    { "name": "wei\u00df", "productCount": 26065, "id": 38935 },
+    { "name": "rot", "productCount": 19677, "id": 38931 },
+    { "name": "braun", "productCount": 17667, "id": 38921 },
+    { "name": "pink", "productCount": 17015, "id": 38930 },
+    { "name": "gr\u00fcn", "productCount": 16994, "id": 38926 },
+    { "name": "beige", "productCount": 10505, "id": 38919 },
+    { "name": "silber", "productCount": 8679, "id": 38933 },
+    { "name": "gold", "productCount": 6980, "id": 38924 },
+    { "name": "mischfarben", "productCount": 6487, "id": 38928 },
+    { "name": "gelb", "productCount": 5698, "id": 38923 },
+    { "name": "lila", "productCount": 4232, "id": 38927 },
+    { "name": "orange", "productCount": 4000, "id": 38929 },
+    { "name": "bronze", "productCount": 305, "id": 38922 },
+    { "name": "transparent", "productCount": 148, "id": 38934 }
+  ]
+}
