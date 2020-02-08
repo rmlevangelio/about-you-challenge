@@ -4,7 +4,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import Header from './Header/Header';
 import ProductStream from './Product/ProductStream';
 import { useProductLoader } from '../api/useProductLoader';
-import Filters from './Filter/Filters';
+import Filter from './Filter/Filter';
 import { useFilterLoader } from '../api/useFilterLoader';
 import { ProductSearchQueryAttributes } from '../types/Product';
 
@@ -32,7 +32,7 @@ const App = () => {
       <Header toggleFilters={toggleFilters} />
       <Layout>
         <ProductStream products={products} />
-        <Filters
+        <Filter
           isOpen={isFilterOpen}
           filters={filters}
           onUpdateSelected={onUpdateSelectedFilters}

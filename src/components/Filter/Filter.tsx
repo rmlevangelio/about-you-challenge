@@ -50,19 +50,26 @@ const Filters: FC<Props> = ({ filters, isOpen, toggle, onUpdateSelected }) => {
     }
   };
 
+  const isColorOrBrand = slug => {
+    return slug === 'color' || slug === 'brand';
+  };
+
   return (
     <>
       <Wrapper isOpen={isOpen}>
         <h2>Filters</h2>
-        {filters.map(filter => (
-          <FilterGroup
-            key={filter.name}
-            name={filter.name}
-            slug={filter.slug}
-            items={filter.values}
-            onFilterItemSelect={onFilterItemSelect}
-          />
-        ))}
+        {filters.map(
+          filter =>
+            isColorOrBrand(filter.slug) && ( // TODO: Display all filter group with specific layout (e.g dropdown)
+              <FilterGroup
+                key={filter.name}
+                name={filter.name}
+                slug={filter.slug}
+                items={filter.values}
+                onFilterItemSelect={onFilterItemSelect}
+              />
+            ),
+        )}
 
         <Actions>
           <Button onClick={toggle}>Submit</Button>
