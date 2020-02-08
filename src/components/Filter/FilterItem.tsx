@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 
 import { FilterItem, Filter, FilterItemsSelected } from '../../types/Filters';
+import Checkbox from '../Checkbox/Checkbox';
 
 interface Props {
   item: FilterItem;
@@ -10,8 +11,12 @@ interface Props {
 }
 
 const FilterItem: FC<Props> = ({ item, slug, onFilterItemSelect }) => {
+  const [isChecked, setIsChecked] = React.useState(false);
+
   const onChange = (id: number) => {
     return event => {
+      setIsChecked(!isChecked);
+
       const payload: FilterItemsSelected = {
         id,
         value: event.target.checked,
@@ -24,7 +29,12 @@ const FilterItem: FC<Props> = ({ item, slug, onFilterItemSelect }) => {
   return (
     <Item key={item.id} htmlFor={`${item.id}`}>
       <ItemCheckboxContainer>
-        <input id={`${item.id}`} type="checkbox" onChange={onChange(item.id)} />
+        <Checkbox
+          name={item.name}
+          id={`${item.id}`}
+          checked={isChecked}
+          onChange={onChange(item.id)}
+        />
       </ItemCheckboxContainer>
       <ItemName>{item.name}</ItemName>
     </Item>
